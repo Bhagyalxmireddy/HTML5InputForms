@@ -17,10 +17,12 @@
             <div>
                 <label for="pwd">Password Input Type:</label>
                 <input type="password" id ="pwd" name="pwd">
+                <error-output class="pwd-error" for="text"></error-output>
             </div>
             <div>
                 <label for="email">Email Input Type:</label>
                 <input type="email" id ="email" name="email">
+                <error-output class="email-error" for="text"></error-output>
             </div>
             <div>
                 <label for="url">url Input Type:</label>
@@ -33,6 +35,7 @@
             <div>
                 <label for="tel">tel Input Type:</label>
                 <input type="tel" id ="tel" name="tel">
+                <error-output class="tel-error" for="text"></error-output>                
             </div>
             <div>
                 <label for="search">search Input Type:</label>
@@ -54,7 +57,7 @@
         </form>
         <script>
             const text = document.querySelector('#text');
-            const textError = document.querySelector('#text-error');
+            const textError = document.querySelector('.text-error');
             text.addEventListener('input',function(){
                 let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
                 if(nameRegex.test(text.value))
